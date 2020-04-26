@@ -46,6 +46,7 @@ In this part 3, we will cover:
    * Model Registry UI
    * Model Registry API
  * Visit a model example from [Part 1](https://github.com/dmatrix/mlflow-workshop-part-1)
+ * How to manage, annotate, and transition models with Model Registry
  * Use Model Registry UI on the local host
 
 Prerequisites
