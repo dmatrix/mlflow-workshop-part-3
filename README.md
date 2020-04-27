@@ -48,11 +48,11 @@ In this part 3, we will cover:
  * Visit a model example from [Part 1](https://github.com/dmatrix/mlflow-workshop-part-1)
  * How to manage, annotate, and transition models with Model Registry
  * Use Model Registry UI on the local host
+ * Deploy and serve a registere model on the local host
 
 Prerequisites
 -------------
-* [Part 1](https://github.com/dmatrix/mlflow-workshop-part-1) of this series
-* [Part 2](https://github.com/dmatrix/mlflow-workshop-part-2) of this series
+* [Part 1](https://github.com/dmatrix/mlflow-workshop-part-1) and [Part 2](https://github.com/dmatrix/mlflow-workshop-part-2) of this series
 * Knowledge of Python 3 and programming in general
 * Preferably a UNIX-based, fully-charged laptop with 8-16 GB, with a Chrome or Firefox browser
 * Familiarity with GitHub, git, and an account on Github
@@ -125,12 +125,26 @@ Coming soon...
  Tutorial 2 - Part 2
  -------------------
  
- Coming soon...
+
+ 
+ Tutorial 3 - Part 1
+ --------------------
+ 
+Let's take our model from the previous example (Tutorial 2 - Part 2) and deploy and serve it locally as
+a rest point in a Flask server launched MLflow CLI. 
+
+1. From a separate window launch 
+ * launch ```mlflow models serve --model-uri runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda``` or ```mlflow models serve -m runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda```
+2. From another terminal send a REST call with Farenheight temperatures
+  * ```curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data": [32, 212, 200, 206]}'```
+  * ```curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data": [100, 150]}'```
 
 Homework/Lab Assignment
 -----------------------
 
-Coming soon...
+* Use ```mlflow models serve [OPTIONS]``` to serve and deploy this model locally
+  * send REST request to score
+ * Use ```mlflow models predict [OPTIONS]``` only to predict (this does not launch a Flask Server)
      
 
 Cheers,
