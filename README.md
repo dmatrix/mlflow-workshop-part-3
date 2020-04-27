@@ -103,7 +103,7 @@ Let's go!
 Session Tutorials
 -----------------
 
-We'll use localhost (or your laptop) to run MLflow projects via GitHub URL, as experiment runs.
+We'll use localhost (or your laptop) to run register models with Model Registry.
 
 Tutorial 1 - Part 1 
 -------------------
@@ -113,22 +113,6 @@ Coming soon...
 
 Tutorial 1 - Part 2
 -------------------
-
-Coming soon...
-
-
-Tutorial 2 - Part 1
--------------------
-
-Coming soon...
- 
- Tutorial 2 - Part 2
- -------------------
- 
-
- 
- Tutorial 3 - Part 1
- --------------------
  
 Let's take our model from the previous example (Tutorial 2 - Part 2) and deploy and serve it locally as
 a rest point in a Flask server launched MLflow CLI. 
@@ -144,7 +128,7 @@ Homework/Lab Assignment
 
 * Use ```mlflow models serve [OPTIONS]``` to serve and deploy this model locally
   * send REST request to score
- * Use ```mlflow models predict [OPTIONS]``` only to predict (this does not launch a Flask Server)
+* Use ```mlflow models predict [OPTIONS]``` only to predict (this does not launch a Flask Server)
      
 
 Cheers,
