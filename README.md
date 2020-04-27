@@ -91,9 +91,8 @@ Installation and Setup environment
 ----------------------------------
 
 1. ```git clone git@github.com:dmatrix/mlflow-workshop-part-3.git or git clone https://github.com/dmatrix/mlflow-workshop-part-3.git```
-2. `cd <your_cloned_directory>/mlflow-workshop-part-2`
+2. `cd <your_cloned_directory>/mlflow-workshop-part-3`
 3. Install MLflow and the required Python modules within your [conda activated environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) or [pipenv environment](https://pypi.org/project/pipenv) if using it
-    * **Note**: If you attended Part 2 of this tutorial and set up your laptop, you can skip this bit.
     * `pip install -r req.txt` or `pip3 install -r req.txt`
 5. `cd src`
 6. If using PyCharm or IntelliJ, create a project and load source files in the project
