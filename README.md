@@ -61,7 +61,7 @@ Prerequisites
      * pandas and Numpy
      * matplotlib
      * keras/TensorFlow
-* PyCharm/IntelliJ or choice of syntax-based Python editor
+* PyCharm/IntelliJ or your choice of syntax-based Python editor
 * pip/pip3 or conda and Python 3 installed
 * Knowledge on how to use [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) or create [pipenv](https://pypi.org/project/pipenv/) enviroments 
 * Loads of virtual laughter, curiosity, and a sense of humor ... :-)
@@ -95,7 +95,7 @@ Installation and Setup environment
 3. Install MLflow and the required Python modules within your [conda activated environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) or [pipenv environment](https://pypi.org/project/pipenv) if using it
     * `pip install -r req.txt` or `pip3 install -r req.txt`
 5. `cd src`
-6. If using PyCharm or IntelliJ, create a project and load source files in the project or use your choice syntax-highlighted editor, like Sublime or vim
+6. If using PyCharm or IntelliJ, create a project and load source files in the project or use your choice of syntax-highlighted editor, like Sublime or vim
 7. [How to use PyCharm and MLflow](https://www.youtube.com/watch?v=yzn1hNkQuWA&feature=youtu.be)
 
 Let's go!
