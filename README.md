@@ -45,10 +45,10 @@ In this part 3, we will cover:
  * Model Registry Workflows
    * Model Registry UI
    * Model Registry API
- * Visit a model example from [Part 1](https://github.com/dmatrix/mlflow-workshop-part-1)
  * How to manage, annotate, and transition models with Model Registry
  * Use Model Registry UI on the local host
- * Deploy and serve a registere model on the local host
+ * Deploy and serve a model on the local host
+  * Visit a model example from [MLflow Project Keras Example](https://github.com/dmatrix/mlflow-workshop-project-expamle-1)
 
 Prerequisites
 -------------
