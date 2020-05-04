@@ -114,8 +114,8 @@ Coming soon...
 Tutorial 2 - Part 1
 -------------------
  
-Let's take our model from the previous Workshop Part-2 (Projects * Models) (Tutorial 2 - Part 2) 
-and deploy and serve it locally as a rest point in a Flask server launched MLflow CLI. 
+Let's take our model from the previous Workshop Part-2 (Projects & Models) (Tutorial 2 - Part 2) 
+and deploy and serve it locally as a REST point tp a server launched MLflow CLI. 
 
 1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` 
     or
@@ -130,16 +130,14 @@ This launch a gunicorn server serving at the localhost:5000. Now you can score l
 on the deployed model.
  
 2. From another terminal send a REST call with Farenheight temperatures
-  * run ```./make_predictions.sh```
+  * run ```make_predictions.sh```
 
 Homework/Lab Assignment
 -----------------------
 
-* Use ```mlflow models serve [OPTIONS]``` to serve and deploy this model locally
-  * send REST request to score
-* Use ```mlflow models predict [OPTIONS]``` only to predict (this does not launch a Flask Server)
+* Use Model Registry UI or API to register models from workshop part-1
+* Use ```mlflow models predict [OPTIONS]``` only to predict
      
-
 Cheers,
 
 Jules
