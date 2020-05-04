@@ -95,7 +95,7 @@ Installation and Setup environment
 3. Install MLflow and the required Python modules within your [conda activated environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) or [pipenv environment](https://pypi.org/project/pipenv) if using it
     * `pip install -r req.txt` or `pip3 install -r req.txt`
 5. `cd src`
-6. If using PyCharm or IntelliJ, create a project and load source files in the project
+6. If using PyCharm or IntelliJ, create a project and load source files in the project or use your choice syntax-highlighted editor, like Sublime or vim
 7. [How to use PyCharm and MLflow](https://www.youtube.com/watch?v=yzn1hNkQuWA&feature=youtu.be)
 
 Let's go!
