@@ -23,7 +23,7 @@ if __name__ == "__main__":
       {"n_estimators": 300}]
 
    # Iterate over few different tuning parameters
-   model_name = "WeatherForestModel"
+   model_name = "SKLearnWeatherForestModel"
    for params in params_list:
       rfr = RFRModel.new_instance(params)
       print("Using paramerts={}".format(params))

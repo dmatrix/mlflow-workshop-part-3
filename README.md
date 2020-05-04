@@ -114,18 +114,23 @@ Coming soon...
 Tutorial 2 - Part 1
 -------------------
  
-Let's take our model from the previous example (Tutorial 2 - Part 2) and deploy and serve it locally as
-a rest point in a Flask server launched MLflow CLI. 
+Let's take our model from the previous Workshop Part-2 (Projects * Models) (Tutorial 2 - Part 2) 
+and deploy and serve it locally as a rest point in a Flask server launched MLflow CLI. 
 
-1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` or
- ```python run_remote_keras_lr.py```
+1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` 
+    or
+    ```python run_remote_keras_lr.py```
+    
+This will run locally and print out the run id. 
 
-2. From a separate window launch and from the same directory 
- * launch ```mlflow models serve --model-uri runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda``` 
-           or ```mlflow models serve -m runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda```
+2. From the same directory, providing the run id as argument, run:
+ * ```deploy_model.sh <INSERT_YOUR_RUN_ID_HERE>``` 
+ 
+This launch a Flask server serving at the localhost:5000. Now you can score locally
+on the deployed model.
+ 
 2. From another terminal send a REST call with Farenheight temperatures
-  * ```curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data": [32, 212, 200]}'```
-  * ```curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data": [100, 150]}'```
+  * run ```./make_predictions.sh```
 
 Homework/Lab Assignment
 -----------------------
