@@ -111,16 +111,20 @@ Tutorial 1 - Part 1
 Coming soon...
 
 
-Tutorial 1 - Part 2
+Tutorial 2 - Part 1
 -------------------
  
 Let's take our model from the previous example (Tutorial 2 - Part 2) and deploy and serve it locally as
 a rest point in a Flask server launched MLflow CLI. 
 
-1. From a separate window launch 
- * launch ```mlflow models serve --model-uri runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda``` or ```mlflow models serve -m runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda```
+1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` or
+ ```python run_remote_keras_lr.py```
+
+2. From a separate window launch and from the same directory 
+ * launch ```mlflow models serve --model-uri runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda``` 
+           or ```mlflow models serve -m runs:/<INSERT_YOUR_RUN_ID_HERE>/model --no-conda```
 2. From another terminal send a REST call with Farenheight temperatures
-  * ```curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data": [32, 212, 200, 206]}'```
+  * ```curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data": [32, 212, 200]}'```
   * ```curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data": [100, 150]}'```
 
 Homework/Lab Assignment
