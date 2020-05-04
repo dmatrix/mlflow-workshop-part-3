@@ -119,14 +119,14 @@ and deploy and serve it locally as a rest point in a Flask server launched MLflo
 
 1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` 
     or
-    ```python run_remote_keras_lr.py```
+    ```python run_project_keras_lr.py```
     
 This will run locally and print out the run id. 
 
 2. From the same directory, providing the run id as argument, run:
  * ```deploy_model.sh <INSERT_YOUR_RUN_ID_HERE>``` 
  
-This launch a Flask server serving at the localhost:5000. Now you can score locally
+This launch a gunicorn server serving at the localhost:5000. Now you can score locally
 on the deployed model.
  
 2. From another terminal send a REST call with Farenheight temperatures

@@ -34,7 +34,7 @@ class RFRModel():
       self._rsme = value
 
    def mlflow_run(self, X_train, y_train, val_x, val_y, model_name,
-                  run_name="Random Forest Regressor: Power Forecasting Model", verbose=False):
+                  run_name="Random Forest Regressor: Power Forecasting Model", register=False, verbose=False):
       with mlflow.start_run(run_name=run_name) as run:
          # Log all parameters
          mlflow.log_params(self.params)
@@ -59,11 +59,16 @@ class RFRModel():
          # Specify the `registered_model_name` parameter of the
          # function to register the model with the  Model Registry. This automatically
          # creates a new model version for each new run
-         mlflow.sklearn.log_model(
-            sk_model=self.model(),
-            artifact_path="sklearn-model",
-            registered_model_name=model_name,
-         )
+         if register:
+            mlflow.sklearn.log_model(
+               sk_model=self.model(),
+               artifact_path="sklearn-model",
+             registered_model_name=model_name,
+            )
+         else:
+            mlflow.sklearn.log_model(
+               sk_model=self.model(),
+               artifact_path="sklearn-model")
          run_id = run.info.run_id
 
       return run_id
