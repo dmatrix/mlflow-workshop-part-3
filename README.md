@@ -108,8 +108,14 @@ We'll use localhost (or your laptop) to run register models with Model Registry.
 Tutorial 1 - Part 1 
 -------------------
 
-Coming soon...
-
+1. `pyhthon run_weather_forecast.py`
+2. launch `mlflow ui --backend-store-uri sqlite:///mlruns.db`
+3. Got to `http://127.0.0.1:5000`
+4. Pick best model and regiser with Model Registry
+ * Add description
+5. Choose second best models and create another version in the Model Registry
+ * Transition the best model into production
+ * Transition the second best model into staging
 
 Tutorial 2 - Part 1
 -------------------

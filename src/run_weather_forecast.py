@@ -7,7 +7,7 @@ if __name__ == "__main__":
    # Use sqlite:///mlruns.db as the local store for tracking and registery
    mlflow.set_tracking_uri("sqlite:///mlruns.db")
 
-   # load and print dataset
+   # Load and print dataset
    csv_path = "data/windfarm_data.csv"
    wind_farm_data = Utils.load_data(csv_path, index_col=0)
    Utils.print_pandas_dataset(wind_farm_data)
@@ -16,7 +16,7 @@ if __name__ == "__main__":
    X_train, y_train = Utils.get_training_data(wind_farm_data)
    val_x, val_y = Utils.get_validation_data(wind_farm_data)
 
-   # train, fit and register our model
+   # Train, fit and register our model
    params_list = [
       {"n_estimators": 100},
       {"n_estimators": 200},
