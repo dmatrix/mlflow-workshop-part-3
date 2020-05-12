@@ -3,6 +3,23 @@ import mlflow
 from cls.rfr_model import RFRModel
 from cls.utils import Utils
 
+"""
+This program will use the MLflow Model Registry to build a machine learning application that forecasts the 
+daily power output of a wind farm. Wind farm power output depends on weather conditions: generally, more energy 
+is produced at higher wind speeds. Accordingly, the machine learning models used in program predict power output 
+based on weather forecasts with three features: wind direction, wind speed, and air temperature.
+
+It uses altered data from the National WIND Toolkit dataset provided by NREL, which is publicly available and cited as follows:
+
+Draxl, C., B.M. Hodge, A. Clifton, and J. McCaa. 2015. Overview and Meteorological Validation of the Wind Integration National Dataset Toolkit (Technical Report, NREL/TP-5000-61740). Golden, CO: National Renewable Energy Laboratory.
+
+Draxl, C., B.M. Hodge, A. Clifton, and J. McCaa. 2015. "The Wind Integration National Dataset (WIND) Toolkit." Applied Energy 151: 355366.
+
+Lieberman-Cribbin, W., C. Draxl, and A. Clifton. 2014. Guide to Using the WIND Toolkit Validation Code (Technical Report, NREL/TP-5000-62595). Golden, CO: National Renewable Energy Laboratory.
+
+King, J., A. Clifton, and B.M. Hodge. 2014. Validation of Power Output for the WIND Toolkit (Technical Report, NREL/TP-5D00-61714). Golden, CO: National Renewable Energy Laboratory.
+"""
+
 if __name__ == "__main__":
    # Use sqlite:///mlruns.db as the local store for tracking and registery
    mlflow.set_tracking_uri("sqlite:///mlruns.db")
