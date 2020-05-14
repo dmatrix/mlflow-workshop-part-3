@@ -65,8 +65,7 @@ class RFRModel():
             mlflow.sklearn.log_model(
                sk_model=self.model,
                artifact_path="sklearn-model",
-             registered_model_name=model_name,
-            )
+               registered_model_name=model_name)
          else:
             mlflow.sklearn.log_model(
                sk_model=self.model,
