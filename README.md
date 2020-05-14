@@ -111,11 +111,10 @@ Tutorial 1 - Part 1
 1. `pyhthon run_weather_forecast.py`
 2. launch `mlflow ui --backend-store-uri sqlite:///mlruns.db`
 3. Got to `http://127.0.0.1:5000`
-4. Pick best model and regiser with Model Registry
- * Add description
-5. Choose second best models and create another version in the Model Registry
- * Transition the best model into production
- * Transition the second best model into staging
+4. Pick the best model, register with Model Registry, and ddd description
+5. Choose second best model and create another version in the Model Registry
+   * Transition the best model into production
+   * Transition the second best model into staging
 
 Tutorial 2 - Part 1
 -------------------
@@ -124,7 +123,9 @@ Let's take our model from the previous Workshop Part-2 (Projects & Models) (Tuto
 and deploy and serve it locally as a REST point tp a server launched MLflow CLI. 
 
 1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` 
-    or
+    
+    Or
+    
     ```python run_project_keras_lr.py```
     
 This will run locally and print out the run id. 
@@ -132,17 +133,19 @@ This will run locally and print out the run id.
 2. From the same directory, providing the run id as argument, run:
  * ```deploy_model.sh <INSERT_YOUR_RUN_ID_HERE>``` 
  
-This launch a gunicorn server serving at the localhost:5000. Now you can score locally
+This launchs a gunicorn server serving at the localhost:5000. Now you can score locally
 on the deployed model.
  
-2. From another terminal send a REST call with Farenheight temperatures
+2. From another terminal send a REST call with fahrenheit temperatures
   * run ```make_predictions.sh```
 
 Homework/Lab Assignment
 -----------------------
 
 * Use Model Registry UI or API to register models from workshop part-1
+* Consult documentation how to use [mflow models predict](https://mlflow.org/docs/latest/cli.html#mlflow-models-predict)
 * Use ```mlflow models predict [OPTIONS]``` only to predict
+    * For example, ```mlflow models predict -m, --model-uri <model_uri> -i, --input-path <input_path>```
      
 Cheers,
 
