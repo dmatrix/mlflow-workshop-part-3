@@ -21,11 +21,14 @@ King, J., A. Clifton, and B.M. Hodge. 2014. Validation of Power Output for the W
 """
 
 if __name__ == "__main__":
+
    # Use sqlite:///mlruns.db as the local store for tracking and registery
    mlflow.set_tracking_uri("sqlite:///mlruns.db")
 
    # Load and print dataset
    csv_path = "data/windfarm_data.csv"
+   # Use column 0 (date) as the index
+
    wind_farm_data = Utils.load_data(csv_path, index_col=0)
    Utils.print_pandas_dataset(wind_farm_data)
 
