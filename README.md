@@ -120,7 +120,7 @@ Tutorial 2 - Part 1
 -------------------
  
 Let's take our model from the previous Workshop Part-2 (Projects & Models) (Tutorial 2 - Part 2) 
-and deploy and serve it locally as a REST point tp a server launched MLflow CLI. 
+and deploy and serve it locally as a REST endpoint to a server launched by MLflow CLI. 
 
 1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` 
     
@@ -128,7 +128,7 @@ and deploy and serve it locally as a REST point tp a server launched MLflow CLI.
     
     ```python run_project_keras_lr.py```
     
-This will run locally and print out the run id. 
+This will run MLflow Project locally and print out the run id. 
 
 2. From the same directory, providing the run id as argument, run:
  * ```deploy_model.sh <INSERT_YOUR_RUN_ID_HERE>``` 
@@ -136,7 +136,7 @@ This will run locally and print out the run id.
 This launchs a gunicorn server serving at the localhost:5000. Now you can score locally
 on the deployed model.
  
-2. From another terminal send a REST call with fahrenheit temperatures
+2. From another terminal send a REST call with fahrenheit temperatures as payload
   * run ```make_predictions.sh```
 
 Homework/Lab Assignment
