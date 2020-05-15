@@ -105,18 +105,8 @@ Session Tutorials
 
 We'll use localhost (or your laptop) to run register models with Model Registry.
 
-Tutorial 1 - Part 1 
--------------------
 
-1. `pyhthon run_weather_forecast.py`
-2. launch `mlflow ui --backend-store-uri sqlite:///mlruns.db`
-3. Got to `http://127.0.0.1:5000`
-4. Pick the best model, register with Model Registry, and ddd description
-5. Choose second best model and create another version in the Model Registry
-   * Transition the best model into production
-   * Transition the second best model into staging
-
-Tutorial 2 - Part 1
+Tutorial 1 - Part 1
 -------------------
  
 Let's take our model from the previous Workshop Part-2 (Projects & Models) (Tutorial 2 - Part 2) 
@@ -138,6 +128,17 @@ on the deployed model.
  
 2. From another terminal send a REST call with fahrenheit temperatures as payload
   * run ```make_predictions.sh```
+
+Tutorial 2 - Part 1 
+-------------------
+
+1. `python run_weather_forecast.py`
+2. launch `mlflow ui --backend-store-uri sqlite:///mlruns.db`
+3. Got to `http://127.0.0.1:5000`
+4. Pick the best model, register with Model Registry, and ddd description
+5. Choose second best model and create another version in the Model Registry
+   * Transition the best model into production
+   * Transition the second best model into staging
 
 Homework/Lab Assignment
 -----------------------
