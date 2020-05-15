@@ -110,7 +110,7 @@ Tutorial 1 - Part 1
 -------------------
  
 Let's take our model from the previous Workshop Part-2 (Projects & Models) (Tutorial 2 - Part 2) 
-and deploy and serve it locally as a REST endpoint to a server launched by MLflow CLI. 
+and [deploy and serve models](https://www.mlflow.org/docs/latest/models.html#deploy-mlflow-models)locally as a REST endpoint to a server launched by MLflow CLI. 
 
 1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` 
     
