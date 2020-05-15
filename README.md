@@ -144,7 +144,7 @@ Homework/Lab Assignment
 
 * Use Model Registry UI or API to register models from workshop part-1
 * Consult documentation how to use [mflow models predict](https://mlflow.org/docs/latest/cli.html#mlflow-models-predict)
-* Use ```mlflow models predict [OPTIONS]``` only to predict
+* Use ```mlflow models predict [OPTIONS]``` to predict
     * For example, ```mlflow models predict -m, --model-uri <model_uri> -i, --input-path <input_path>```
      
 Cheers,
