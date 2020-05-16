@@ -95,7 +95,7 @@ Installation and Setup environment
 3. Install MLflow and the required Python modules within your [conda activated environment](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) or [pipenv environment](https://pypi.org/project/pipenv) if using it
     * `pip install -r req.txt` or `pip3 install -r req.txt`
 5. `cd src`
-6. If using PyCharm or IntelliJ, create a project and load source files in the project or use your choice of syntax-highlighted editor, like Sublime or vim
+6. If using PyCharm or IntelliJ, create a project and load source files in into your project or use your choice of syntax-highlighted editor, like Sublime or vim
 7. [How to use PyCharm and MLflow](https://www.youtube.com/watch?v=yzn1hNkQuWA&feature=youtu.be)
 
 Let's go!
@@ -103,7 +103,7 @@ Let's go!
 Session Tutorials
 -----------------
 
-We'll use localhost (or your laptop) to run register models with Model Registry.
+We'll use localhost (or your laptop) to run and register models with Model Registry.
 
 
 Tutorial 1 - Part 1
@@ -123,11 +123,11 @@ This will run MLflow Project locally and print out the run id.
 2. From the same directory, providing the run id as argument, run:
  * ```deploy_model.sh <INSERT_YOUR_RUN_ID_HERE>``` 
  
-This launchs a gunicorn server serving at the localhost:5000. Now you can score locally
-on the deployed model.
+This launchs a gunicorn server serving at the localhost `127.0.0.1:5000`. Now you can score locally
+on the deployed model as a REST point.
  
-2. From another terminal send a REST call with fahrenheit temperatures as payload
-  * run ```make_predictions.sh```
+2. From another terminal send a POST request with fahrenheit temperatures as payload
+  * ```make_predictions.sh```
 
 Tutorial 2 - Part 1 
 -------------------
