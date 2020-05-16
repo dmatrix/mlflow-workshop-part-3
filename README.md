@@ -41,11 +41,10 @@ MLflow workshop part 3
 
 In this part 3, we will cover:
  * Concepts and motivation behind Model Registry
- * Tour of the the Model Registry Documentation and APIs
  * Model Registry Workflows
    * Model Registry UI
    * Model Registry API
- * How to manage, annotate, and transition models with Model Registry
+ * Managed MLflow Model Registry Demo
  * Use Model Registry UI on the local host
  * Deploy and serve a model on the local host
   * Visit a model example from [MLflow Project Keras Example](https://github.com/dmatrix/mlflow-workshop-project-expamle-1)
@@ -146,7 +145,9 @@ Homework/Lab Assignment
 * Use Model Registry UI or API to register models from workshop part-1
 * Consult documentation how to use [mflow models predict](https://mlflow.org/docs/latest/cli.html#mlflow-models-predict)
 * Use ```mlflow models predict [OPTIONS]``` to predict
-    * For example, ```mlflow models predict -m, --model-uri <model_uri> -i, --input-path <input_path>```
+    * For example: 
+    
+    ```mlflow models predict -m, --model-uri <model_uri> -i, --input-path <input_path>```
      
 Cheers,
 
