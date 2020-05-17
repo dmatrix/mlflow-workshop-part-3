@@ -25,8 +25,8 @@ if __name__ == "__main__":
    mlflow.set_tracking_uri("sqlite:///mlruns.db")
    # Load and print dataset
    csv_path = "data/windfarm_data.csv"
-   # Use column 0 (date) as the index
 
+   # Use column 0 (date) as the index
    wind_farm_data = Utils.load_data(csv_path, index_col=0)
    Utils.print_pandas_dataset(wind_farm_data)
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
       {"n_estimators": 300}]
 
    # Iterate over few different tuning parameters
-   model_name = "SKLearnWeatherForestModel"
+   model_name = "PowerForecastingModel"
    for params in params_list:
       rfr = RFRModel.new_instance(params)
       print("Using paramerts={}".format(params))
@@ -49,9 +49,13 @@ if __name__ == "__main__":
       print("MLflow run_id={} completed with MSE={} and RMSE={}".format(runID, rfr.mse, rfr.rsme))
 
    # Load test data
-   score_weather_cvs = "data/test_windfarm_data.csv"
+   score_weather_cvs = "data/score_windfarm_data.csv"
    score_df = Utils.load_data(score_weather_cvs,index_col=0)
    score_df = score_df.drop(columns=["power"])
+
+   # Our JSON payload for scoring the model
+   # Use as payload on the REST call to the deployed model
+   # on the local host
    print(score_df.to_json(orient="records"))
 
 

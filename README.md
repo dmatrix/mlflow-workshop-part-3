@@ -110,7 +110,7 @@ Tutorial 1 - Part 1
 1. `python run_weather_forecast.py`
 2. launch `mlflow ui --backend-store-uri sqlite:///mlruns.db`
 3. Got to `http://127.0.0.1:5000`
-4. Pick the best model, register with Model Registry as `SKLearnWeatherForestModel`
+4. Pick the best model, register with Model Registry as `PowerForecastingModel`
 5. Choose second best model and create version 2 in the Model Registry
    * Transition the best model into `Production`
    * Transition the second best model into `Staging`
