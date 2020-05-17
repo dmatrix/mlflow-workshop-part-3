@@ -46,8 +46,7 @@ In this part 3, we will cover:
    * Model Registry API
  * Managed MLflow Model Registry Demo
  * Use Model Registry UI on the local host
- * Deploy and serve a model on the local host
-  * Visit a model example from [MLflow Project Keras Example](https://github.com/dmatrix/mlflow-workshop-project-expamle-1)
+ * Deploy and serve a model from the Model Registry on the local host
 
 Prerequisites
 -------------
