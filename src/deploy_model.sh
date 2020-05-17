@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
-echo "Deploying model with Run ID=$1"
+echo "Deploying Production model name=SKLearnWeatherForestModel"
 
-mlflow models serve --model-uri runs:/$1/model --no-conda
+export MLFLOW_TRACKING_URI=sqlite:///mlruns.db
+mlflow models serve --model-uri models:/SKLearnWeatherForestModel/production --no-conda

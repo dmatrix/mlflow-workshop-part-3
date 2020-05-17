@@ -102,47 +102,39 @@ Let's go!
 Session Tutorials
 -----------------
 
-We'll use localhost (or your laptop) to run and register models with Model Registry.
+We'll use localhost (or your laptop) to run and register models with Model Registry, followed by
+deploying a "production" model as a REST endpoint locally.
 
-
-Tutorial 1 - Part 1
--------------------
- 
-Let's take our model from the previous Workshop Part-2 (Projects & Models) (Tutorial 2 - Part 2) 
-and [deploy and serve models](https://www.mlflow.org/docs/latest/models.html#deploy-mlflow-models)locally as a REST endpoint to a server launched by MLflow CLI. 
-
-1. ```mlflow run git@github.com:dmatrix/mlflow-workshop-project-expamle-1.git -P batch_size=10 -P epochs=1000``` 
-    
-    Or
-    
-    ```python run_project_keras_lr.py```
-    
-This will run MLflow Project locally and print out the run id. 
-
-2. From the same directory, providing the run id as argument, run:
- * ```deploy_model.sh <INSERT_YOUR_RUN_ID_HERE>``` 
- 
-This launchs a gunicorn server serving at the localhost `127.0.0.1:5000`. Now you can score locally
-on the deployed model as a REST point.
- 
-2. From another terminal send a POST request with fahrenheit temperatures as payload
-  * ```make_predictions.sh```
-
-Tutorial 2 - Part 1 
+Tutorial 1 - Part 1 
 -------------------
 
 1. `python run_weather_forecast.py`
 2. launch `mlflow ui --backend-store-uri sqlite:///mlruns.db`
 3. Got to `http://127.0.0.1:5000`
-4. Pick the best model, register with Model Registry, and ddd description
-5. Choose second best model and create another version in the Model Registry
-   * Transition the best model into production
-   * Transition the second best model into staging
+4. Pick the best model, register with Model Registry as `SKLearnWeatherForestModel`
+5. Choose second best model and create version 2 in the Model Registry
+   * Transition the best model into `Production`
+   * Transition the second best model into `Staging`
 
+Tutorial 1 - Part 2
+-------------------
+ 
+Let's take our production model from from our Model Registry and [deploy and serve models](https://www.mlflow.org/docs/latest/models.html#deploy-mlflow-models) locally as a REST endpoint to a server launched by MLflow CLI. 
+
+1. From the same directory run:
+ * ```deploy_model.sh``` 
+ 
+This launches a gunicorn server serving at the localhost `127.0.0.1:5000`. Now you can score locally
+on the deployed produciton model as a REST point.
+ 
+2. From another terminal send a POST request with our JSON payload
+  * ```make_predictions.sh```
+
+ 
 Homework/Lab Assignment
 -----------------------
 
-* Use Model Registry UI or API to register models from workshop part-1
+* Use Model Registry UI or API to register models from workshop part-1: Petrol consumption
 * Consult documentation how to use [mflow models predict](https://mlflow.org/docs/latest/cli.html#mlflow-models-predict)
 * Use ```mlflow models predict [OPTIONS]``` to predict
     * For example: 

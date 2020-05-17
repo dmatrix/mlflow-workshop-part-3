@@ -21,10 +21,8 @@ King, J., A. Clifton, and B.M. Hodge. 2014. Validation of Power Output for the W
 """
 
 if __name__ == "__main__":
-
    # Use sqlite:///mlruns.db as the local store for tracking and registery
    mlflow.set_tracking_uri("sqlite:///mlruns.db")
-
    # Load and print dataset
    csv_path = "data/windfarm_data.csv"
    # Use column 0 (date) as the index
@@ -49,5 +47,11 @@ if __name__ == "__main__":
       print("Using paramerts={}".format(params))
       runID = rfr.mlflow_run(X_train, y_train, val_x, val_y, model_name)
       print("MLflow run_id={} completed with MSE={} and RMSE={}".format(runID, rfr.mse, rfr.rsme))
+
+   # Load test data
+   score_weather_cvs = "data/test_windfarm_data.csv"
+   score_df = Utils.load_data(score_weather_cvs,index_col=0)
+   score_df = score_df.drop(columns=["power"])
+   print(score_df.to_json(orient="records"))
 
 
