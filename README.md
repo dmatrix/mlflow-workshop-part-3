@@ -127,7 +127,7 @@ This launches a gunicorn server serving at the localhost `127.0.0.1:5000`. Now y
 on the deployed produciton model as a REST point.
  
 2. From another terminal send a POST request with our JSON payload
-  * ```make_predictions.sh```
+  * ```make_predictions.sh``` or ```python make_predictions.py```
 
  
 Homework/Lab Assignment
