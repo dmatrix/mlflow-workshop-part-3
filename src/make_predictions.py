@@ -11,5 +11,5 @@ if __name__ == '__main__':
    try:
       response = requests.post(request_uri, data=payload, headers=headers)
       print(response.content)
-   except Exception as ex:
+   except Exception as ex:s
       raise(ex)
