@@ -6,6 +6,8 @@ Part 3 of 3
 Other parts:
 - [Part 1](https://github.com/dmatrix/mlflow-workshop-part-1)
 - [Part 2](https://github.com/dmatrix/mlflow-workshop-part-2)
+- [Watch workshops on YouTube](https://www.youtube.com/playlist?list=PLTPXxbhUt-YWjDg318nmSxRqTgZFWQ2ZC)
+
 
 Content for the MLflow Series
 -----------------------------

@@ -46,7 +46,7 @@ if __name__ == "__main__":
    for params in params_list:
       rfr = RFRModel.new_instance(params)
       print("Using paramerts={}".format(params))
-      runID = rfr.mlflow_run(X_train, y_train, val_x, val_y, model_name)
+      runID = rfr.mlflow_run(X_train, y_train, val_x, val_y, model_name, register=True)
       print("MLflow run_id={} completed with MSE={} and RMSE={}".format(runID, rfr.mse, rfr.rsme))
 
    # Load test data

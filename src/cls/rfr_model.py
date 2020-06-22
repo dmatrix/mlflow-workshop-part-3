@@ -61,15 +61,13 @@ class RFRModel():
          # Specify the `registered_model_name` parameter of the
          # function to register the model with the Model Registry. This automatically
          # creates a new model version for each new run
-         if register:
-            mlflow.sklearn.log_model(
-               sk_model=self.model,
-               artifact_path="sklearn-model",
-               registered_model_name=model_name)
-         else:
-            mlflow.sklearn.log_model(
+         mlflow.sklearn.log_model(
+            sk_model=self.model,
+            artifact_path="sklearn-model",
+            registered_model_name=model_name) if register else mlflow.sklearn.log_model(
                sk_model=self.model,
                artifact_path="sklearn-model")
+
          run_id = run.info.run_id
 
       return run_id
